@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "letterboxmod",
+	"version": "${version}",
+	"name": "Letterbox Mod",
+	"description": "Just a mod which add letterbox",
+	"authors": [
+		"kiwisaki"
+	],
+	"contact": {
+		"homepage": "https://github.com/beltrancruz",
+		"sources": "https://github.com/beltrancruz/aetherflow_letterbox"
+	},
+	"license": "MIT",
+	"icon": "assets/letterboxmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.kiwisaki.LetterboxMod"
+		],
+		"client": [
+			"com.kiwisaki.LetterboxModClient"
+		]
+	},
+	"mixins": [
+		"letterboxmod.mixins.json",
+		{
+			"config": "letterboxmod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
